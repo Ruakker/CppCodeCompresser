@@ -11,7 +11,7 @@
     />
     <link
       rel="stylesheet"
-      href="https://cdn.jsdelivr.net/gh/Ruakker/CppCodeCompresser@1.0.1/assets/css/font-awesome/css/font-awesome.min.css"
+      href="https://cdn.jsdelivr.net/gh/Ruakker/assets@1.0.1/font-awesome-4.7.0/css/font-awesome.min.css"
     />
     <script src="https://cdn.jsdelivr.net/gh/ajaxorg/ace-builds@1.4.12/src-min-noconflict/ace.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/ajaxorg/ace-builds@1.4.12/src-min-noconflict/ext-language_tools.js"></script>
@@ -25,8 +25,11 @@
         ace.config.set("basePath", ".");
         editor.setTheme("ace/theme/xcode");
         editor.session.setMode("ace/mode/c_cpp");
+        editor.getSession().setTabSize(4);
         editor.setFontSize(20);
         editor.setReadOnly(false);
+        editor.setHighlightActiveLine(true);
+        editor.setShowPrintMargin(false);
         editor.setOption("wrap", "free");
         ace.require("ace/ext/language_tools");
         editor.setOptions({
