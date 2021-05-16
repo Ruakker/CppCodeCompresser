@@ -1,25 +1,31 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="cn">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <link rel="icon" href="./favicon.ico">
+    <link rel="icon" href="./favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Compress Your C++ Code!</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Ruakker/CppCodeCompresser@1.0.1/assets/css/normalize.min.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Ruakker/CppCodeCompresser@1.0.1/assets/css/font-awesome/css/font-awesome.min.css" />
-    <script src="https://cdn.jsdelivr.net/gh/Ruakker/CppCodeCompresser@1.0.1/ace/ace.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/gh/Ruakker/CppCodeCompresser@1.0.1/ace/ext-language_tools.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/gh/Ruakker/CppCodeCompresser@1.0.1/ace/mode-c_cpp.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/gh/Ruakker/CppCodeCompresser@1.0.1/ace/theme-tomorrow.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/gh/Ruakker/CppCodeCompresser@1.0.1/assets/snippets/c_cpp.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/Ruakker/CppCodeCompresser@1.0.1/assets/css/normalize.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/Ruakker/CppCodeCompresser@1.0.1/assets/css/font-awesome/css/font-awesome.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/gh/ajaxorg/ace-builds@1.4.12/src-min-noconflict/ace.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/ajaxorg/ace-builds@1.4.12/src-min-noconflict/ext-language_tools.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/ajaxorg/ace-builds@1.4.12/src-min-noconflict/mode-c_cpp.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/ajaxorg/ace-builds@1.4.12/src-min-noconflict/theme-xcode.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/ajaxorg/ace-builds@1.4.12/src-min-noconflict/snippets/c_cpp.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/Ruakker/CppCodeCompresser@1.0.1/js/compress.min.js"></script>
     <script>
       function setEditor() {
         editor = ace.edit("code");
         ace.config.set("basePath", ".");
-        editor.setTheme("ace/theme/tomorrow");
+        editor.setTheme("ace/theme/xcode");
         editor.session.setMode("ace/mode/c_cpp");
-        editor.setFontSize(25);
+        editor.setFontSize(20);
         editor.setReadOnly(false);
         editor.setOption("wrap", "free");
         ace.require("ace/ext/language_tools");
@@ -114,15 +120,24 @@
         >C++ 代码压行机</a
       >
       <div class="by fl">
-        Made by <a href="https://mivik.gitee.io/" target="_blank"><b>Mivik</b></a>&nbsp;|
-      </div>
-      <div class="by fl">
-        Reprinted by <a href="https://ruakker.cn/" target="_blank"><b>Ruakker</b></a> with 💖
+        Made by
+        <a href="https://mivik.gitee.io/" target="_blank"><b>Mivik</b></a>
+        |
+        <del>
+          Reprinted by
+          <a href="https://ruakker.cn/" target="_blank"><b>Ruakker</b></a> with
+          💖</del
+        >
+        | stO<b>
+          <a href="https://mivik.gitee.io/" target="_blank"><b>Mivik</b></a> </b
+        >Orz
       </div>
       <div id="compress" class="hand fr">
         压行!<i class="fa fa-compress" aria-hidden="true"></i>
       </div>
     </div>
-    <pre id="code" class=" ace_editor ace-tomorrow" style="font-size: 25px;">#include&lt;cstdio&gt;&#10;int main(){&#10;&#9;puts("Hello World!");&#10;&#9;return 0;&#10;}</pre>
+    <pre id="code" class="ace_editor ace-xcode" style="font-size: 20px">
+#include&lt;cstdio&gt;&#10;int main(){&#10;&#9;puts("Hello World!");&#10;&#9;return 0;&#10;}</pre
+    >
   </body>
 </html>
