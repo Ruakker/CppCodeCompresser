@@ -43,7 +43,7 @@
         document.getElementById("compress").onclick = function () {
           editor.session.setValue(compress(editor.getValue()));
         };
-		document.getElementById("compresswithformat").onclick = function () {
+        document.getElementById("compresswithformat").onclick = function () {
           editor.session.setValue(compresswithformat(editor.getValue()));
         };
         setEditor();
@@ -147,21 +147,21 @@
       <div class="by fl">
         Made by
         <a href="https://mivik.gitee.io/" target="_blank"><b>Mivik</b></a>
-        |
-        <del>
-          Reprinted by
-          <a href="https://ruakker.cn/" target="_blank"><b>Ruakker</b></a> with
-          💖</del
-        >
-        | stO<b>
-          <a href="https://mivik.gitee.io/" target="_blank"><b>Mivik</b></a> </b
-        >Orz
+        | Enhanced by
+        <a href="https://ruakker.cn/" target="_blank"><b>Ruakker</b></a> with 💖
       </div>
       <div id="compress" class="hand fr">
         压行!<i class="fa fa-compress" aria-hidden="true"></i>
-      </div>&nbsp;
+      </div>
+      &nbsp;
       <div id="compresswithformat" class="hand fr">
         格式化压行!<i class="fa fa-compress" aria-hidden="true"></i>
+      </div>
+      &nbsp;
+      <div id="maxlen" class="hand fr">
+        <form name="width">
+          压行宽度：<input type="text" name="maxlen" value="80" />
+        </form>
       </div>
     </div>
     <pre id="code" class="ace_editor ace-xcode" style="font-size: 20px">
