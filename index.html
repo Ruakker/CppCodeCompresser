@@ -38,10 +38,10 @@
       }
       window.onload = function () {
         document.getElementById("compress").onclick = function () {
-          editor.session.setValue(compress(editor.getValue()));
-        };
-        document.getElementById("compresswithformat").onclick = function () {
           editor.session.setValue(compresswithformat(editor.getValue()));
+        };
+        document.getElementById("clear").onclick = function () {
+			editor.session.setValue('');
         };
         setEditor();
       };
@@ -85,18 +85,32 @@
         vertical-align: middle;
       }
 
-      #header #compresswithformat {
+      #header #clear {
         padding-left: 0.5rem;
         padding-right: 0.5rem;
         height: 2rem;
         transition: all 0.2s;
       }
 
-      #header #compresswithformat:hover {
+      #header #clear:hover {
         background-color: #eee;
       }
 
-      #header #compresswithformat i {
+      #header #clear i {
+        font-size: 1.5rem;
+        width: 2rem;
+        margin-left: 0.3rem;
+        vertical-align: middle;
+      }
+
+      #header #maxlen {
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+        height: 2rem;
+        transition: all 0.2s;
+      }
+
+      #header #maxlen i {
         font-size: 1.5rem;
         width: 2rem;
         margin-left: 0.3rem;
@@ -110,6 +124,16 @@
       }
 
       #header .intro:hover {
+        background-color: #eee;
+      }
+
+      #header .description {
+        width: 5rem;
+        transition: all 0.2s;
+		font-weight: bold;
+      }
+
+      #header .description:hover {
         background-color: #eee;
       }
 
@@ -138,28 +162,28 @@
 
   <body>
     <div id="header" class="no-select">
-      <a class="intro fl hand" href="https://compress.ruakker.cn/"
-        >C++ 代码压行机</a
-      >
+		<a class="intro fl hand" href="https://compress.ruakker.cn/"
+		  >C++ 代码压行机</a
+		>
+		<a class="description fl hand" href="https://blog.ruakker.cn/index.php/cpp-code-compresser/"
+		  >使用说明</a
+		>
       <div class="by fl">
         Made by
         <a href="https://mivik.gitee.io/" target="_blank"><b>Mivik</b></a>
         | Enhanced by
         <a href="https://ruakker.cn/" target="_blank"><b>Ruakker</b></a> with 💖
       </div>
+	  <div id="clear" class="hand fr">
+        清空<i class="fa fa-repeat"></i>
+      </div>&nbsp;
       <div id="compress" class="hand fr">
-        压行!<i class="fa fa-compress" aria-hidden="true"></i>
-      </div>
-      &nbsp;
-      <div id="compresswithformat" class="hand fr">
-        格式化压行!<i class="fa fa-compress" aria-hidden="true"></i>
+        压行<i class="fa fa-compress" aria-hidden="true"></i>
       </div>
       <div id="maxlen" class="fr">
         <form name="width" onsubmit="return false;">
           格式化压行宽度：<input
             type="number"
-            min="2"
-            placeholder="宽度必须大于等于 2"
             name="maxlen"
             value="80"
             style="width: 40px; height: 25px"
