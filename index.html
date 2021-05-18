@@ -7,7 +7,7 @@
     <title>Compress Your C++ Code!</title>
     <link
       rel="stylesheet"
-      href="https://cdn.jsdelivr.net/gh/Ruakker/CppCodeCompresser@1.0.1/assets/css/normalize.min.css"
+      href="./assets/css/normalize.css"
     />
     <link
       rel="stylesheet"
@@ -18,7 +18,7 @@
     <script src="https://cdn.jsdelivr.net/gh/ajaxorg/ace-builds@1.4.12/src-min-noconflict/mode-c_cpp.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/ajaxorg/ace-builds@1.4.12/src-min-noconflict/theme-xcode.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/ajaxorg/ace-builds@1.4.12/src-min-noconflict/snippets/c_cpp.js"></script>
-    <script src="https://cdn.jsdelivr.net/gh/Ruakker/CppCodeCompresser@1.0.1/js/compress.min.js"></script>
+    <script src="./js/compress.js"></script>
     <script src="./js/compresswithformat.js"></script>
     <script>
       function setEditor() {
@@ -140,7 +140,7 @@
   </head>
 
   <body>
-    <div id="header" class="fl no-select">
+    <div id="header" class="no-select">
       <a class="intro fl hand" href="https://compress.ruakker.cn/"
         >C++ 代码压行机</a
       >
@@ -157,10 +157,9 @@
       <div id="compresswithformat" class="hand fr">
         格式化压行!<i class="fa fa-compress" aria-hidden="true"></i>
       </div>
-      &nbsp;
-      <div id="maxlen" class="hand fr">
-        <form name="width">
-          压行宽度：<input type="text" name="maxlen" value="80" />
+      <div id="maxlen" class="fr">
+        <form name="width" onsubmit="return false;">
+          格式化压行宽度：<input type="number" min="2" placeholder="宽度必须大于等于 2" name="maxlen" value="80" style="width: 40px; height: 25px;" />
         </form>
       </div>
     </div>
