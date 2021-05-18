@@ -41,7 +41,7 @@
           editor.session.setValue(compresswithformat(editor.getValue()));
         };
         document.getElementById("clear").onclick = function () {
-			editor.session.setValue('');
+          editor.session.setValue("");
         };
         setEditor();
       };
@@ -130,7 +130,7 @@
       #header .description {
         width: 5rem;
         transition: all 0.2s;
-		font-weight: bold;
+        font-weight: bold;
       }
 
       #header .description:hover {
@@ -162,21 +162,23 @@
 
   <body>
     <div id="header" class="no-select">
-		<a class="intro fl hand" href="https://compress.ruakker.cn/"
-		  >C++ 代码压行机</a
-		>
-		<a class="description fl hand" href="https://blog.ruakker.cn/index.php/cpp-code-compresser/"
-		  >使用说明</a
-		>
+      <a class="intro fl hand" href="https://compress.ruakker.cn/"
+        >C++ 代码压行机</a
+      >
+      <a
+        class="description fl hand"
+        href="https://blog.ruakker.cn/index.php/cpp-code-compresser/"
+        target="_blank"
+        >使用说明</a
+      >
       <div class="by fl">
         Made by
         <a href="https://mivik.gitee.io/" target="_blank"><b>Mivik</b></a>
         | Enhanced by
         <a href="https://ruakker.cn/" target="_blank"><b>Ruakker</b></a> with 💖
       </div>
-	  <div id="clear" class="hand fr">
-        清空<i class="fa fa-repeat"></i>
-      </div>&nbsp;
+      <div id="clear" class="hand fr">清空<i class="fa fa-repeat"></i></div>
+      &nbsp;
       <div id="compress" class="hand fr">
         压行<i class="fa fa-compress" aria-hidden="true"></i>
       </div>
