@@ -19,6 +19,7 @@
     <script src="https://cdn.jsdelivr.net/gh/ajaxorg/ace-builds@1.4.12/src-min-noconflict/theme-xcode.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/ajaxorg/ace-builds@1.4.12/src-min-noconflict/snippets/c_cpp.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/Ruakker/CppCodeCompresser@1.0.1/js/compress.min.js"></script>
+    <script src="./js/compresswithformat.js"></script>
     <script>
       function setEditor() {
         editor = ace.edit("code");
@@ -41,6 +42,9 @@
       window.onload = function () {
         document.getElementById("compress").onclick = function () {
           editor.session.setValue(compress(editor.getValue()));
+        };
+		document.getElementById("compresswithformat").onclick = function () {
+          editor.session.setValue(compresswithformat(editor.getValue()));
         };
         setEditor();
       };
@@ -78,6 +82,24 @@
       }
 
       #header #compress i {
+        font-size: 1.5rem;
+        width: 2rem;
+        margin-left: 0.3rem;
+        vertical-align: middle;
+      }
+
+      #header #compresswithformat {
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+        height: 2rem;
+        transition: all 0.2s;
+      }
+
+      #header #compresswithformat:hover {
+        background-color: #eee;
+      }
+
+      #header #compresswithformat i {
         font-size: 1.5rem;
         width: 2rem;
         margin-left: 0.3rem;
@@ -137,6 +159,9 @@
       </div>
       <div id="compress" class="hand fr">
         压行!<i class="fa fa-compress" aria-hidden="true"></i>
+      </div>&nbsp;
+      <div id="compresswithformat" class="hand fr">
+        格式化压行!<i class="fa fa-compress" aria-hidden="true"></i>
       </div>
     </div>
     <pre id="code" class="ace_editor ace-xcode" style="font-size: 20px">
