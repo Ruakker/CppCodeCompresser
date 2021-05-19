@@ -15,7 +15,8 @@
     <script src="https://cdn.jsdelivr.net/gh/ajaxorg/ace-builds@1.4.12/src-min-noconflict/mode-c_cpp.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/ajaxorg/ace-builds@1.4.12/src-min-noconflict/theme-xcode.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/ajaxorg/ace-builds@1.4.12/src-min-noconflict/snippets/c_cpp.js"></script>
-    <script src="./js/compress.js"></script>
+	<script src="./js/compress.js"></script>
+    <script src="./js/copytoclipboard.js"></script>
     <script>
       function setEditor() {
         editor = ace.edit("code");
@@ -42,6 +43,9 @@
         document.getElementById("clear").onclick = function () {
           editor.session.setValue("");
         };
+        document.getElementById("copy").onclick = function () {
+		  copyToClip(editor.getValue());
+        };
         setEditor();
       };
     </script>
@@ -66,50 +70,18 @@
         background-color: #fafafa;
       }
 
-      #header #compress {
+      #header .btn {
         padding-left: 0.5rem;
         padding-right: 0.5rem;
         height: 2rem;
         transition: all 0.2s;
       }
 
-      #header #compress:hover {
+      #header .btn:hover {
         background-color: #eee;
       }
 
-      #header #compress i {
-        font-size: 1.5rem;
-        width: 2rem;
-        margin-left: 0.3rem;
-        vertical-align: middle;
-      }
-
-      #header #clear {
-        padding-left: 0.5rem;
-        padding-right: 0.5rem;
-        height: 2rem;
-        transition: all 0.2s;
-      }
-
-      #header #clear:hover {
-        background-color: #eee;
-      }
-
-      #header #clear i {
-        font-size: 1.5rem;
-        width: 2rem;
-        margin-left: 0.3rem;
-        vertical-align: middle;
-      }
-
-      #header #maxlen {
-        padding-left: 0.5rem;
-        padding-right: 0.5rem;
-        height: 2rem;
-        transition: all 0.2s;
-      }
-
-      #header #maxlen i {
+      #header .btn i {
         font-size: 1.5rem;
         width: 2rem;
         margin-left: 0.3rem;
@@ -179,9 +151,15 @@
         | Enhanced by
         <a href="https://ruakker.cn/" target="_blank"><b>Ruakker</b></a> with 💖
       </div>
-      <div id="clear" class="hand fr">清空<i class="fa fa-trash-o"></i></div>
+      <div id="clear" class="btn hand fr">
+        清空<i class="fa fa-trash-o"></i>
+      </div>
       &nbsp;
-      <div id="compress" class="hand fr">
+      <div id="copy" class="btn hand fr">
+        复制<i class="fa fa-clone" aria-hidden="true"></i>
+      </div>
+      &nbsp;
+      <div id="compress" class="btn hand fr">
         压行<i class="fa fa-compress" aria-hidden="true"></i>
       </div>
       <div id="maxlen" class="fr">
