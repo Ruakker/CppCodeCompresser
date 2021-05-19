@@ -15,7 +15,7 @@
     <script src="https://cdn.jsdelivr.net/gh/ajaxorg/ace-builds@1.4.12/src-min-noconflict/mode-c_cpp.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/ajaxorg/ace-builds@1.4.12/src-min-noconflict/theme-xcode.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/ajaxorg/ace-builds@1.4.12/src-min-noconflict/snippets/c_cpp.js"></script>
-	<script src="./js/compress.js"></script>
+    <script src="./js/compress.js"></script>
     <script src="./js/copytoclipboard.js"></script>
     <script>
       function setEditor() {
@@ -44,7 +44,7 @@
           editor.session.setValue("");
         };
         document.getElementById("copy").onclick = function () {
-		  copyToClip(editor.getValue());
+          copyToClip(editor.getValue());
         };
         setEditor();
       };
@@ -154,11 +154,9 @@
       <div id="clear" class="btn hand fr">
         清空<i class="fa fa-trash-o"></i>
       </div>
-      &nbsp;
       <div id="copy" class="btn hand fr">
         复制<i class="fa fa-clone" aria-hidden="true"></i>
       </div>
-      &nbsp;
       <div id="compress" class="btn hand fr">
         压行<i class="fa fa-compress" aria-hidden="true"></i>
       </div>
@@ -169,7 +167,7 @@
             name="maxlen"
             value="80"
             style="width: 40px; height: 25px"
-          />
+          />&nbsp;
         </form>
       </div>
     </div>
