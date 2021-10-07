@@ -229,8 +229,7 @@ function compresswithformat(str) {
 function $compresswithformat(str) {
 	var ret = "";
 	var maxlen = width.maxlen.value;
-	if (maxlen == -1) return str;
-	if (maxlen < 2) maxlen = 2;
+	if (maxlen < 2) return str;
 	var cnt = 1;
 	for (var i = 0; i < str.length; ++i, ++cnt) {
 		if (str[i] == "\n") cnt = 0;
